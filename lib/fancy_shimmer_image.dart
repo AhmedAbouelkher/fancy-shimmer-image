@@ -21,6 +21,16 @@ class FancyShimmerImage extends StatelessWidget {
     this.shimmerHighlightColor,
     this.shimmerBackColor,
     this.errorWidget,
+    this.alignment,
+    this.color,
+    this.colorBlendMode,
+    this.fadeInCurve,
+    this.fadeInDuration,
+    this.fadeOutCurve,
+    this.fadeOutDuration,
+    this.imageBuilder,
+    this.progressIndicatorBuilder,
+    this.filterQuality,
   });
 
   final String imageUrl;
@@ -33,6 +43,16 @@ class FancyShimmerImage extends StatelessWidget {
   final Color shimmerHighlightColor;
   final Color shimmerBackColor;
   final Widget errorWidget;
+  final Color color;
+  final AlignmentGeometry alignment;
+  final BlendMode colorBlendMode;
+  final ImageWidgetBuilder imageBuilder;
+  final Duration fadeOutDuration;
+  final Curve fadeOutCurve;
+  final Duration fadeInDuration;
+  final Curve fadeInCurve;
+  final ProgressIndicatorBuilder progressIndicatorBuilder;
+  final FilterQuality filterQuality;
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +61,16 @@ class FancyShimmerImage extends StatelessWidget {
       fit: boxFit,
       width: width,
       height: height,
+      color: color,
+      alignment: alignment,
+      colorBlendMode: colorBlendMode,
+      imageBuilder: imageBuilder,
+      fadeInCurve: fadeInCurve,
+      fadeInDuration: fadeInDuration,
+      fadeOutCurve: fadeOutCurve,
+      fadeOutDuration: fadeOutDuration,
+      progressIndicatorBuilder: progressIndicatorBuilder,
+      filterQuality: filterQuality,
       placeholder: (context, url) => ImageShimmerWidget(
         width: width,
         height: height,
