@@ -21,16 +21,16 @@ class FancyShimmerImage extends StatelessWidget {
     this.shimmerHighlightColor,
     this.shimmerBackColor,
     this.errorWidget,
-    this.alignment,
     this.color,
     this.colorBlendMode,
-    this.fadeInCurve,
-    this.fadeInDuration,
-    this.fadeOutCurve,
-    this.fadeOutDuration,
+    this.fadeOutDuration = const Duration(milliseconds: 1000),
+    this.fadeOutCurve = Curves.easeOut,
+    this.fadeInDuration = const Duration(milliseconds: 500),
+    this.fadeInCurve = Curves.easeIn,
+    this.alignment = Alignment.center,
+    this.filterQuality = FilterQuality.low,
     this.imageBuilder,
     this.progressIndicatorBuilder,
-    this.filterQuality,
   });
 
   final String imageUrl;
